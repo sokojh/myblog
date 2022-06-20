@@ -1,13 +1,19 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
-  let post = "강남 우동 맛집";
+  let logoName = "myBlog";
+  const [title, setTitle] = useState("남자 코트 추천");
+
   return (
     <div className="App">
-      <div className="black-nav">
-        <h4> myBlog</h4>
+      <div className="blackNav">
+        <h4> {logoName}</h4>
       </div>
-      <h4>{post}</h4>
+      <div className="articleList">
+        <h4>{title}</h4>
+        <p>6월 20일 발행</p>
+      </div>
     </div>
   );
 }
