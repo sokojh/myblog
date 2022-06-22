@@ -13,6 +13,12 @@ function App() {
   function likeHandler() {
     setLike(like + 1);
   }
+  function titleHandler() {
+    const newTitle = [...title];
+    newTitle[0] = "여자 코트 추천";
+    console.log(newTitle);
+    setTitle(newTitle);
+  }
   return (
     <div className="App">
       <div className="blackNav">
@@ -24,6 +30,13 @@ function App() {
           <span onClick={likeHandler}> 👍 </span> <span>{like}</span>{" "}
         </h4>
         <p>6월 20일 발행</p>
+        <button
+          onClick={() => {
+            titleHandler();
+          }}
+        >
+          수정버튼
+        </button>
       </div>
       <div className="articleList">
         <h4>{title[1]}</h4>
